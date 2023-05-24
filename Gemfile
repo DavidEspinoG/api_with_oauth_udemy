@@ -8,10 +8,9 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
-
+gem 'jsom-pagination'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -30,6 +29,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 gem 'jsonapi-serializer', '~> 2.2'
+gem 'jsonapi_errors_handler'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -41,7 +41,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
   gem 'factory_bot_rails', '~> 6.2'
-  
+  gem 'database_cleaner-active_record'
 end
 
 group :development do
