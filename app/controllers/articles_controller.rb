@@ -2,8 +2,6 @@ class ArticlesController < ApplicationController
 
   include Paginable
 
-  rescue from 
-
   def index
     paginated = paginate(Article.recent)
     render_collection(paginated)
